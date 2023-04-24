@@ -4,6 +4,5 @@ RUN apt -y update && \
     apt -y install hmmer
 
 WORKDIR /opt/
-RUN hmmer --version
 
 ENTRYPOINT [ "hmmer" ]
