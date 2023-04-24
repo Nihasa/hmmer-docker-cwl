@@ -1,9 +1,9 @@
-FROM rockylinux/rockylinux:9.1
+FROM ubuntu:22.04
 
-RUN dnf -y update && \
-    dnf -y install hmmer
+RUN apt -y update && \
+    apt -y install hmmer
 
 WORKDIR /opt/
 RUN hmmer --version
 
-ENTRYPOINT [ "seqkit" ]
+ENTRYPOINT [ "hmmer" ]
